@@ -21,8 +21,12 @@ jobs:
 
     - name: Jinja2
       run: |
-        pip install Jinja2
+        pip3 install Jinja2
 
-    - name: Run Jinja2
+    - name: pyyaml
+      run: |
+        pip3 install pyyaml
+
+    - name: Run
       run: |
         python3 test.py
