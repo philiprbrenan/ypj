@@ -18,3 +18,7 @@ jobs:
       run: |
         python3 --version
         pip3    --version
+
+    - name: Jinja2
+      run: |
+        pip install Jinja2
