@@ -1,16 +1,13 @@
 from jinja2 import Template
-template = Template('Hello {{ name }}!')
-print(template.render(name='World'))
-
 import yaml
-document = """
+
+document = """                                                                  # Some sample yml
 name: World
 greeting: Hello
 """
 
+y = yaml.load(document, Loader=yaml.FullLoader)                                 # Load the yml document
 
-y = yaml.load(document)
-print(yaml.dump(y))
-
-for data in y:
-  print(data)
+print(y["greeting"]+" "+y["name"])                                              # Print directly
+print(Template("The greeting is this:\n{{greeting}}\n{{name}}\n").render        # Print via template
+ (greeting=y["greeting"],name=y["name"]))
