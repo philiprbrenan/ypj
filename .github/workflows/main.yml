@@ -22,3 +22,7 @@ jobs:
     - name: Jinja2
       run: |
         pip install Jinja2
+
+    - name: Run Jinja2
+      run: |
+        python3 test.py
