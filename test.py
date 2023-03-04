@@ -7,4 +7,4 @@ document = """
 name: World
 greeting: Hello
 """
-print yaml.dump(yaml.load(document))
+print(yaml.dump(yaml.load(document)))
